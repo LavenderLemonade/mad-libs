@@ -9,7 +9,6 @@ namespace madlibs
 
             string[] libs = new string[5];
             string[] desc = { "emotion", "game", "game", "s.o", "emotion" };
-            int i = 0;
 
             Console.WriteLine("Welcome to the MadLib! What is your name?");
             string name = Console.ReadLine();
