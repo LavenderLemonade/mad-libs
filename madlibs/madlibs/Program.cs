@@ -27,20 +27,20 @@ namespace madlibs
 
 
             */
-
-            string[] red = { "one", "two", "three" };
-
-            var input = "hey ___ hey ___ hey ___";
-
-            var counter = 0;
-
-            var substring = Regex.Escape("___");
-            var substitute = red[counter];
+            
+            string[] red = { "one", "two", "three" }; // this is the array w strings inside
+            var input = "hey ___ hey ___ hey ___";    // this is the string with spaces I wanna remove
+            var counter = 0;                          // a counter variable
+            var substring = Regex.Escape("___");      // telling Regex what I wanna pull out          
+            var result = Regex.Replace(input, substring, (m) =>$"{red[counter++]}");
+            Console.WriteLine(result);
+                
+           
+           
+            
             
 
-            var result = Regex.Replace(input, substring, (m) => $"{substitute}{counter++}");
-
-            Console.WriteLine(result);
+            
 
 
         }
