@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace madlibs
 {
@@ -6,7 +7,7 @@ namespace madlibs
     {
         static void Main(string[] args)
         {
-
+            /*
             string[] libs = new string[5];
             string[] desc = { "emotion", "game", "game", "s.o", "emotion" };
             int i;
@@ -25,9 +26,27 @@ namespace madlibs
             Console.WriteLine("I really really " + libs[0] + " playing board games! From " + libs[1] + " to " + libs[2] + " my sweetie " + libs[3] + " and I really " + libs[4] + " playing games together!");
 
 
+            */
+
+            string[] red = { "one", "two", "three" };
+
+            var input = "hey ___ hey ___ hey ___";
+
+            var counter = 0;
+
+            var substring = Regex.Escape("___");
+            var substitute = red[counter];
             
-           
-           
+
+            var result = Regex.Replace(input, substring, (m) => $"{substitute}{counter++}");
+
+            Console.WriteLine(result);
+
+
         }
+
+
+
+
     }
 }
