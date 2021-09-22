@@ -26,30 +26,11 @@ namespace madlibs
                 text = regex.Replace(text, words[i], 1);
             }
             Console.WriteLine(text);
-            
-
-            /*
-            string[] red = { "one", "two", "three", "", "" };
-            int count = red.Count(x => x != null);
-            Console.WriteLine(count);
-            
-
-            /*
-            string[] green = new string[50];
-            Console.WriteLine(checkEmpty(green));
-
-            static int checkEmpty(string[] input)
-            {
-                int count = input.Count(x => x != null);
-                return count;
-            }
-            */
-
+ 
             static int checkEmpty(string input)
             {
                 Regex regex = new Regex("[_]{1,}");
                 int blue = Regex.Matches(input, "[_]{1,}").Count;
-                Console.WriteLine(blue);
                 return blue;
             }
             
