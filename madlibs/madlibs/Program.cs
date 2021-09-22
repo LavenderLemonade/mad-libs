@@ -29,12 +29,11 @@ namespace madlibs
  
             static int checkEmpty(string input)
             {
-                Regex regex = new Regex("[_]{1,}");
                 int blue = Regex.Matches(input, "[_]{1,}").Count;
                 return blue;
             }
             
-
+            // it's working
 
 
 
