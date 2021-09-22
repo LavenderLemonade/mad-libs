@@ -6,4 +6,4 @@ The point of this project is to eventually make a madlibs program with a GUI tha
 
 ## Current Project Status
 
-The program can take in a string with specific, 3 underscore spaces, and replace them with words that the user has input into the program. Next steps will be either pulling in a text file, or seeing if I can modify the program so that I grabs series of underscores irrespective of the size of them, and then replaces those with words. 
+The program can take in a text file with spaces of specifically 3 underscores, and then replace those underscores with words input by the user. Next steps will be either working towards being able to replace sections of undercores regardless of number, or moving towards implementing the GUI. 
