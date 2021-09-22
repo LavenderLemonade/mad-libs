@@ -11,7 +11,7 @@ namespace madlibs
             string[] words = new string[10];
             string[] desc = { "emotion", "game", "game", "s.o", "emotion" };
             int i; 
-            Regex regex = new Regex("[_]{2,}");
+            Regex regex = new Regex("[_]{1,}");
             string text = System.IO.File.ReadAllText(@"C:\Users\samue\Desktop\Sam's Folder\Coding Journey\CSharp\madlibs\madlib.txt");
             Console.WriteLine("Welcome to the MadLib! What is your name?");
             string name = Console.ReadLine();
