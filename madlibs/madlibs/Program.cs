@@ -7,6 +7,7 @@ namespace madlibs
     {
         static void Main(string[] args)
         {
+            /*
             string[] words = new string[10];
             string[] desc = { "emotion", "game", "game", "s.o", "emotion" };
             int i; 
@@ -23,6 +24,16 @@ namespace madlibs
             }
             var result = Regex.Replace(text, substring, (m) => $"{words[counter++]}");
             Console.WriteLine(result);
+
+            */
+
+
+            string hey = "hi __ hi hi ___ hi hi hi ____";
+            Regex regex = new Regex("[_]{2,}");
+            hey = regex.Replace(hey, "name");
+            Console.WriteLine(hey);
+
+
         }
 
 
