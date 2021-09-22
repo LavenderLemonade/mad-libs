@@ -24,13 +24,19 @@ namespace madlibs
             }
             var result = Regex.Replace(text, substring, (m) => $"{words[counter++]}");
             Console.WriteLine(result);
-
             */
 
 
+            string[] green = { "one", "two", "three" };
+            int i;
             string hey = "hi __ hi hi ___ hi hi hi ____";
             Regex regex = new Regex("[_]{2,}");
-            hey = regex.Replace(hey, "name");
+            for (i=0; i < 3;i++)
+            {
+                hey = regex.Replace(hey, green[i],1);
+                
+              
+            }
             Console.WriteLine(hey);
 
 
