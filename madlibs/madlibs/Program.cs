@@ -11,8 +11,8 @@ namespace madlibs
             string[] desc = { "emotion", "game", "game", "s.o", "emotion" };
             int i; 
             var counter = 0; 
-            var substring = Regex.Escape("___"); 
-            var input = "I really really ___ playing board games! From ___ to ___ my sweetie ___ and I really ___ playing games together!";
+            var substring = Regex.Escape("___");
+            string text = System.IO.File.ReadAllText(@"C:\Users\samue\Desktop\Sam's Folder\Coding Journey\CSharp\madlibs\madlib.txt");
             Console.WriteLine("Welcome to the MadLib! What is your name?");
             string name = Console.ReadLine();
             Console.WriteLine("Ah, welcome " + name + "!" + " get ready for the MadLib!");
@@ -21,7 +21,7 @@ namespace madlibs
                 Console.WriteLine("Give me a " + desc[i] + " word");
                 words[i] = Console.ReadLine();
             }
-            var result = Regex.Replace(input, substring, (m) => $"{words[counter++]}");
+            var result = Regex.Replace(text, substring, (m) => $"{words[counter++]}");
             Console.WriteLine(result);
         }
 
